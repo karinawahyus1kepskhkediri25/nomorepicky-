@@ -1,0 +1,263 @@
+:root {
+  --bg-light: #e6eedb;
+  --bg-dark: #013220;
+  --green-strong: #355E3B;
+  --green-medium: #6C8B6E;
+  --green-soft: #9AA06D;
+  --text-light: #ffffff;
+}
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--bg-light);
+  color: var(--bg-dark);
+  scroll-behavior: smooth;
+}
+header.hero {
+  position: relative;
+  background: url('front-view-picky-girl-refuse-vegetables.jpg') center/cover no-repeat;
+  min-height: 220px;
+  height: 28vw;
+  max-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.overlay {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(1, 50, 32, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+.judul-utama {
+  font-family: 'Playfair Display', serif;
+  font-size: 4.2rem;
+  color: #fffbe9;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.35);
+  -webkit-text-stroke: 0.5px rgba(0,0,0,0.2);
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+.tagline {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: #e0f5cf;
+  margin-top: 1rem;
+}
+nav {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+.menu-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: none;
+}
+.menu-horizontal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  transition: max-height 0.3s;
+}
+.menu-horizontal a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 0.75rem;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+  font-size: 1rem;
+}
+.menu-horizontal a:hover,
+.menu-horizontal a.active {
+  background-color: var(--green-medium);
+  color: #fffbe9;
+}
+section {
+  padding: 2rem 4%;
+  max-width: 900px;
+  margin: auto;
+  display: none;
+}
+h2 {
+  color: var(--green-strong);
+  margin-top: 2rem;
+}
+ul, ol {
+  padding-left: 1.5rem;
+}
+.video-grid {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  margin-top: 1rem;
+}
+.video-grid iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+}
+/* Footer */
+footer {
+  background-color: var(--bg-dark);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+}
+footer a {
+  color: var(--green-soft);
+  text-decoration: underline;
+}
+.custom-footer {
+  background-color: #013220;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  flex-wrap: wrap;
+  font-size: 0.95rem;
+}
+.footer-left {
+  display: flex;
+  align-items: center;
+}
+.author-photo {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+.footer-right {
+  text-align: right;
+}
+.footer-right p {
+  margin: 0 0 4px;
+  font-size: 0.75rem;
+}
+.social-icons a {
+  margin-left: 8px;
+  font-size: 1.2rem;
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+.social-icons a:hover {
+  transform: scale(1.15);
+  color: #ffd700;
+}
+/* Tombol kembali ke atas */
+#toTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: var(--green-soft);
+  border: none;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 1000;
+  display: none;
+}
+/* --- MOBILE STYLES --- */
+@media (max-width: 900px) {
+  .judul-utama {
+    font-size: 2.3rem;
+  }
+  .tagline {
+    font-size: 1rem;
+  }
+  header.hero {
+    height: 120px;
+    min-height: 100px;
+    max-height: 180px;
+  }
+  nav {
+    padding: 0.7rem 1rem;
+  }
+  .custom-footer, section {
+    padding-left: 4vw;
+    padding-right: 4vw;
+  }
+}
+@media (max-width: 600px) {
+  html {
+    font-size: 14px;
+  }
+  header.hero {
+    height: 80px;
+    min-height: 70px;
+    max-height: 120px;
+  }
+  .judul-utama {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    line-height: 1.15;
+  }
+  .tagline {
+    font-size: 0.90rem;
+    margin-top: 0.4rem;
+  }
+  .menu-toggle {
+    display: block;
+    color: white;
+    font-size: 1.5rem;
+  }
+  .menu-horizontal {
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.6rem;
+    padding: 0.7rem 0;
+    background: var(--bg-dark);
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  .menu-horizontal.show {
+    display: flex;
+  }
+  .custom-footer {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 0.5rem;
+    font-size: 0.9rem;
+  }
+  .footer-right {
+    margin-top: 1rem;
+    text-align: center;
+  }
+}
+@media (max-width: 400px) {
+  .judul-utama {
+    font-size: 1rem;
+  }
+}
